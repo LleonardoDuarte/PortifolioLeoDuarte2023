@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Yusei+Magic&display=swap");
+
+/* ESTILO GERAL */
+:root {
+  --clr-bcg: #000;
+  --clr-font: #fff;
+  --clr-primary: #ffa7c4;
+  --clr-grey: #cbd5e1;
+}
+
+.dark-theme {
+  --clr-bcg: #ffffffd0;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+  --clr-grey: #64748b;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 10vh;
+  font-family: "Yusei Magic", sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+  background: var(--clr-bcg);
+  color: var(--clr-font);
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  gap: 120px;
+  padding: 20px;
+}
+
+.btn-contato button {
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: red;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.claro-escuro {
+  padding: 5px 5px;
+  font-size: 10px;
+  font-weight: 900;
+  background-color: red;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.titulo {
+  color: var(--clr-font);
+  font-size: 38px;
+  text-align: center;
+  padding: 30px;
+}
+
+.titulo span {
+  color: red;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+  padding: 40px 4%;
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: var(--clr-font);
+  text-decoration: none;
+  transform: 0.5s;
+}
+
+header a:hover {
+  color: var(--clr-font);
+  display: inline-block;
+  transform: scale(1.05);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+header nav.menu-desktop ul li {
+  display: inline-block;
+  padding: 0 40px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 30px;
+}
+
+header nav ul li:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px var(--clr-font);
+}
+
+header .claro-escuro:hover {
+  box-shadow: 0px 0px 20px var(--clr-font);
+}
+
+.btn-contato button:hover {
+  box-shadow: 0px 0px 15px var(--clr-font);
+  transform: scale(1.05);
+}
+
+/* MENU MOBILE */
+.menu-mobile {
+  background: var(--clr-bcg);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+.menu-mobile nav ul li {
+  color: var(--clr-font);
+  font-size: 20px;
+  font-weight: 800;
+  padding: 20px 8%;
+  border-radius: 20px;
+}
+
+.abrir-menu {
+  width: 70%;
+  transition: 0.5s;
+}
+
+.abrir-menu ~ .overlay-menu-mobile {
+  display: block;
+}
+
+.menu-mobile nav ul li:hover {
+  background-color: red;
+  opacity: 90%;
+}
+.menu-mobile .btn-fechar {
+  padding: 20px 4%;
+}
+.btn-abrir-menu svg {
+  color: red;
+  display: none;
+}
+
+.overlay-menu-mobile {
+  background-color: #000000a5;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
+/* ESTILO TOPO SITE */
+section .topo-site {
+  padding: 40px 4%;
+}
+
+section .topo-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-site .txt-topo-site h1 {
+  color: var(--clr-font);
+  font-size: 60px;
+  line-height: 50px;
+}
+.topo-site .txt-topo-site h1 span {
+  color: red;
+  font-size: 40px;
+}
+.topo-site .txt-topo-site p {
+  color: var(--clr-font);
+  margin: 40px 0;
+  font-size: 18px;
+}
+
+.topo-site .img-topo-site img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  -webkit-animation: 2s flutuar ease-in-out infinite alternate;
+  animation: 2s flutuar ease-in-out infinite alternate;
+}
+
+.topo-site span {
+  position: relative;
+}
+
+.topo-site span::before {
+  content: "";
+  color: red;
+  -webkit-animation: palavras 10s infinite;
+  animation: palavras 10s infinite;
+}
+
+.topo-site span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid red;
+  right: -10px;
+  -webkit-animation: cursor 0.5s infinite, digita 10s steps(15) infinite;
+  animation: cursor 0.8s infinite, digita 10s steps(15) infinite;
+  width: calc(100% + 20px);
+  background-color: var(--clr-bcg);
+}
+
+@-webkit-keyframes digita {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 20px);
+  }
+}
+
+@keyframes digita {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 20px);
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-left: 2px solid var(--clr-bcg);
+  }
+}
+@-webkit-keyframes cursor {
+  0% {
+    border-left: 2px solid var(--clr-bcg);
+  }
+}
+
+@-webkit-keyframes palavras {
+  0%,
+  20% {
+    content: " a unica coisa";
+  }
+  21%,
+  40% {
+    content: "de que a mente";
+  }
+  41%,
+  60% {
+    content: "nunca se cansa";
+  }
+  61%,
+  80% {
+    content: "nunca tem medo e";
+  }
+  81%,
+  100% {
+    content: "nunca se arrepende.";
+  }
+}
+
+@keyframes palavras {
+  0%,
+  20% {
+    content: " a unica coisa";
+  }
+  21%,
+  40% {
+    content: "de que a mente";
+  }
+  41%,
+  60% {
+    content: "nunca se cansa";
+  }
+  61%,
+  80% {
+    content: "nunca tem medo e";
+  }
+  81%,
+  100% {
+    content: "nunca se arrepende.";
+  }
+}
+
+@-webkit-keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+button:hover {
+  box-shadow: 0px 0px 15px var(--clr-font);
+  transform: scale(1.05);
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+.especialidades {
+  padding: 40px 4%;
+}
+
+.especialidades-box {
+  color: var(--clr-font);
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.especialidades-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--clr-font);
+}
+
+.especialidades-box span {
+  font-size: 70px;
+  color: red;
+}
+
+.claro-escuro span {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.especialidades-box h3 {
+  font-size: 28px;
+  margin: 15px;
+}
+
+/* ESTILO DE SOBRE */
+section .sobre {
+  padding: 40px 4%;
+}
+
+.sobre .img-sobre img {
+  width: 450px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+.sobre .flex {
+  align-items: center;
+  gap: 60px;
+}
+.sobre .txt-sobre {
+  color: var(--clr-font);
+}
+
+.sobre .txt-sobre h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.sobre .txt-sobre h2 span {
+  color: red;
+  display: block;
+}
+
+.sobre .txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.sobre .txt-sobre .btn-social button {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border-radius: 100%;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* ESTILO DO PORTIFOLIO */
+section.portifolio {
+  margin-top: 80px;
+  padding: 80px 4%;
+  box-shadow: 0 0px 40px 10px #ffffff53;
+}
+
+.img-port {
+  width: 360px;
+  height: 460px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 5s;
+  cursor: pointer;
+  position: relative;
+}
+
+.img-port p {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 600;
+  background-color: #0000009b;
+  color: #fff;
+  opacity: 0;
+  transition: 1s;
+}
+
+.overlay:hover {
+  opacity: 100%;
+}
+
+/* ESTILO DO FOOTER */
+
+footer {
+  padding: 60px 4%;
+}
+
+footer .line-footer {
+  padding: 20px 0;
+  border-bottom: 4px solid red;
+}
+
+footer .line-footer p svg {
+  color: red;
+}
+
+footer .line-footer p a {
+  color: var(--clr-font);
+}
+
+footer .copy {
+  padding-top: 20px;
+}
+
+/* RESPONSIVO DO SITE */
+@media screen and (max-width: 1140px) {
+  /* CLASSES GERAIS */
+  .flex {
+    flex-direction: column;
+  }
+
+  /* MENU MOBILE */
+  .btn-abrir-menu svg {
+    display: block;
+  }
+
+  /* CABEÇALHO */
+  .menu-desktop,
+  .btn-contato {
+    display: none;
+  }
+
+  /* TOPO DO SITE */
+  .topo-site .img-topo-site img {
+    width: 250px;
+    height: 250px;
+  }
+
+  section .topo-site {
+    padding: 20px 8%;
+  }
+  .topo-site .flex {
+    flex-direction: column-reverse;
+  }
+
+  .topo-site .txt-topo-site h1 {
+    font-size: 40px;
+    line-height: 30px;
+  }
+
+  .claro-escuro p {
+    display: none;
+  }
+
+  /*  ESPECIALIDADES */
+  .especialidades {
+    padding: 40px 8%;
+  }
+  .especialidades h2 {
+    font-size: 30px;
+  }
+
+  /* SOBRE */
+  .sobre .img-sobre img {
+    width: 250px;
+    height: 250px;
+  }
+  .sobre .txt-sobre h2 {
+    font-size: 30px;
+  }
+
+  /* PORTIFÓLIO */
+
+  section.portifolio {
+    padding: 20px 0;
+  }
+  .portifolio h2 {
+    font-size: 28px;
+  }
+
+  .img-port {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

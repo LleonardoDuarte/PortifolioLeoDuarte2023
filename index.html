@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Meu Portifólio</title>
+  </head>
+  <body>
+    <header>
+      <!-- LOGO -->
+      <div class="interface">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="./Images/f1fab58483b84445810b8efa52c0a909-removebg-preview.png"
+              alt="Logo"
+            />
+            <!-- MODO CLARO/ESCURO -->
+            <div class="modos">
+              <button class="claro-escuro">
+                <span class="material-symbols-outlined"> switch_left </span>
+                <p>Claro/Escuro</p>
+              </button>
+            </div>
+          </a>
+        </div>
+        <!-- MENU DA PÁGINA -->
+        <nav class="menu-desktop">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#especialidades">Especialidades</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+          </ul>
+        </nav>
+        <div class="btn-contato">
+          <a href="#email">
+            <button>Contato</button>
+          </a>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div class="btn-abrir-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-list-nested"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </div>
+        <div class="menu-mobile">
+          <div class="btn-fechar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#especialidades">Especialidades</a></li>
+              <li><a href="#sobre">Sobre Mim</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#email">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="overlay-menu-mobile"></div>
+      </div>
+    </header>
+
+    <main>
+      <!--Topo do site-->
+      <section class="topo-site">
+        <div class="interface">
+          <div class="flex">
+            <div class="txt-topo-site">
+              <h1>Aprender é <span class="animacao"></span></h1>
+              <p>
+                Olá seja muito bem vindo, sou um estudante de programação
+                voltado ao desenvolvimento web utilizando a linguagem
+                Javascript.
+              </p>
+              <div class="btn-contato"></div>
+            </div>
+            <div class="img-topo-site">
+              <img
+                src="./Images/Black Geometric Depop Profile Picture.png"
+                alt="perfil"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ESPECIALIDADES -->
+      <section class="especialidades" id="especialidades">
+        <div class="interface">
+          <h2 class="titulo">
+            MINHAS <span>ESPECIALIDADES E OBJETIVOS.</span>
+          </h2>
+          <div class="flex">
+            <div class="especialidades-box">
+              <span class="material-symbols-outlined"> school </span>
+              <h3>Meus cursos</h3>
+              <p>
+                Listarei aqui alguns cursos que já realizei durante o periodo em
+                que estudo programação.
+              </p>
+              <p>
+                Rocketseat Discover Programação de computadores (40 horas) Udemy
+                Javascript Tutorial and Projects Course (46 horas) DIO
+                programação para internet com Javascript (2 horas) DIO Lógica de
+                programação (4 horas)
+              </p>
+            </div>
+            <div class="especialidades-box">
+              <span class="material-symbols-outlined"> menu_book </span>
+              <h3>Minhas especialidades</h3>
+              <p>
+                Durante meu periodo de estudo até o momento, pude ter contato
+                com vários tipos de ferramenta tendo como base certamento HTML,
+                CSS e javascript. Mas também utilizo durante meus estudos React,
+                Git, Github, node.js para desenvolver projetos que possam me
+                ajudar a melhorar meu conhecimento.
+              </p>
+            </div>
+            <div class="especialidades-box">
+              <span class="material-symbols-outlined"> drag_indicator </span>
+              <h3>Meus objetivos</h3>
+              <p>
+                Como objetivo principal desejo realmente me tornar um
+                desenvolvedor web com conhecimento avançado, o estudo e a
+                prática diária com certeza me fará chegar onde desejo, acredito
+                que a oportunidade de poder também estar em uma empresa ao qual
+                poderei ter contato com profissionais avançados da área irá me
+                ajudar muito no desenvolvimento do conhecimento para se chegar a
+                um passo mais avançado do conhecimento front-end
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SOBRE -->
+      <section class="sobre" id="sobre">
+        <div class="interface">
+          <div class="flex">
+            <div class="img-sobre">
+              <img
+                src="./Images/Polish_20220612_074007401.jpg"
+                alt="imagem sobre"
+              />
+            </div>
+            <div class="txt-sobre">
+              <h2 id="sobre">Muito prazer, <span>Me chamo leonardo</span></h2>
+              <p>
+                Contarei um pouco sobre mim aqui. Tenho atualmente 28 anos e sou
+                formado em educação física pela universidade cidade de são
+                paulo, durante minha trajetória estava convicto que iria
+                desenvolver um trabalho interessante dentro da área ao qual eu
+                escolhi como carreira, porem após formado e após trabalhar como
+                autônomo na área, percebi que a educação física não poderia me
+                oferecer aquilo que desejo e busco como desenvolvimento pessoal
+                e profissional, por coincidência ou não tomei conhecimento da
+                programação durante um anúncio na internet e como já tinha
+                afinidade com computadores decidi pesquisar mais sobre, acabei
+                me apaixonando pela vasta imensidão que é a programação em suas
+                diferentes vertentes e desde 2021 estudo a linguagem javascript
+                que escolhi como base para todos meus estudos, atualmente busco
+                uma oportunidade para poder desenvolver minhas capacidades e
+                atuar como desenvolvedor front-end e poder assim começar minha
+                busca a realmente chegar aonde desejo como sucesso profissional.
+              </p>
+              <p>Fico a disposição para contatos e oportunidades!</p>
+              <div class="btn-social">
+                <a href="https://github.com/LleonardoDuarte" target="_blank"
+                  ><button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      fill="currentColor"
+                      class="bi bi-github"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg></button
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/leonardo-pereira-duarte-a15065222"
+                  target="_blank"
+                  ><button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      fill="currentColor"
+                      class="bi bi-linkedin"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                      />
+                    </svg></button
+                ></a>
+                <a
+                  href="https://web.whatsapp.com/send?phone=5511966174571"
+                  target="_blank"
+                >
+                  <button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      fill="currentColor"
+                      class="bi bi-whatsapp"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                      />
+                    </svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PORTIFÓLIO -->
+      <section class="portifolio" id="projetos">
+        <div class="interface">
+          <h2 class="titulo">MEU <span>PORTIFÓLIO</span></h2>
+          <div class="flex">
+            <div
+              class="img-port"
+              style="background-image: url(./Images/projeto1.png)"
+            >
+              <p style="color: red">Home Netflix</p>
+              <a href="https://netflixhomejs.netlify.app/" target="_blank">
+                <button class="overlay">Projeto 1</button>
+              </a>
+            </div>
+
+            <div
+              class="img-port"
+              style="
+                background-image: url(Images/imagem_2023-09-15_110134660.png);
+              "
+            >
+              <p style="color: red">Página Spotfy com React</p>
+              <a href="https://spotfyinterface.netlify.app" target="_blank">
+                <button class="overlay">Projeto 2</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- RODAPÉ -->
+    <footer>
+      <div class="interface">
+        <div class="line-footer">
+          <p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-envelope-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+              />
+            </svg>
+            <a href="mailto:leopd_00@hotmail.com" id="email"
+              >leopd_00@hotmail.com</a
+            >
+          </p>
+        </div>
+        <p class="copy">&copy; 2023 Portifólio de apresentação.</p>
+      </div>
+    </footer>
+    <!--Script-->
+    <script src="./index.js"></script>
+  </body>
+</html>
